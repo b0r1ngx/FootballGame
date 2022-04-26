@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game"
+    android:background="@drawable/gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+
+        android:src="@drawable/back"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/end_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="20dp"
+        style="@style/Regular"
+        android:background="@drawable/pick_button"
+
+        android:text="@string/end_game"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/match"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        style="@style/Bold"
+        android:textSize="18sp"
+
+
+        android:text="@string/match"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RelativeLayout
+        android:id="@+id/event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/game_window"
+        android:layout_marginTop="18dp"
+        android:paddingBottom="14dp"
+        app:layout_constraintTop_toBottomOf="@id/match"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/draw">
+
+        <ImageView
+            android:id="@+id/country1"
+            android:layout_width="121dp"
+            android:layout_height="84dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+
+            android:src="@drawable/brazil" />
+
+        <TextView
+            android:id="@+id/country1_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country1"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="48dp"
+            style="@style/Regular"
+            android:textSize="15sp"
+            android:text="country_1"/>
+
+        <ImageView
+            android:id="@+id/two_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/two_dots"/>
+
+        <ImageView
+            android:id="@+id/country2"
+            android:layout_width="121dp"
+            android:layout_height="84dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="14dp"
+
+            android:src="@drawable/russia" />
+
+        <TextView
+            android:id="@+id/country2_text"
+            style="@style/Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/country2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="43dp"
+            android:text="country_2"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/w1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="20dp"
+        style="@style/Regular"
+        android:background="@drawable/pick_button"
+
+        android:text="@string/w_1"
+
+        app:layout_constraintTop_toBottomOf="@id/event"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        style="@style/Regular"
+        android:background="@drawable/pick_button"
+
+        android:text="@string/draw"
+
+        app:layout_constraintTop_toBottomOf="@id/event"
+        app:layout_constraintStart_toEndOf="@id/w1"
+        app:layout_constraintEnd_toStartOf="@+id/w2"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/w2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="20dp"
+        style="@style/Regular"
+        android:background="@drawable/pick_button"
+
+        android:text="@string/w_2"
+
+        app:layout_constraintTop_toBottomOf="@id/event"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toBottomOf="@id/draw"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/result" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

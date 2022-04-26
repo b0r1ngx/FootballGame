@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">P0495</string>
+
+    <!-- Shared Preference for saving player score-->
+    <string name="preference_score">score</string>
+    <string name="index_history">index</string>
+
+    <string name="start">Start</string>
+    <string name="results">Results</string>
+    <string name="politics">Politics</string>
+    <string name="exit">Exit</string>
+
+    <string name="match">MATCH</string>
+    <string name="w_1">W-1</string>
+    <string name="draw">DRAW</string>
+    <string name="w_2">W-2</string>
+
+    <string name="result">Result</string>
+    <string name="end_game">End Game</string>
+    <string name="ok">OK</string>
+    <string name="bogdan">Bogdan</string>
+    <string name="statistics">Statistics</string>
+
+
+
+</resources>
